@@ -8,14 +8,18 @@ describe('Update Genre', () => {
     const genreRepo = new InMemoryGenreRepository();
     const updateGenre = new UpdateGenre(genreRepo);
 
-    const genre1 = makeGenre({
-      id: 'c89496c6-3150-4b9a-b3f8-c72edb8a3753',
-      name: 'Action',
-    });
-    const genre2 = makeGenre({
-      id: 'c89496c6-3150-4b9a-b3f8-c72edb8a3ea0',
-      name: 'Terror',
-    });
+    const genre1 = makeGenre(
+      {
+        name: 'Action',
+      },
+      'c89496c6-3150-4b9a-b3f8-c72edb8a3753',
+    );
+    const genre2 = makeGenre(
+      {
+        name: 'Terror',
+      },
+      'c89496c6-3150-4b9a-b3f8-c72edb8a3ea0',
+    );
 
     await genreRepo.create(genre1);
     await genreRepo.create(genre2);
@@ -42,14 +46,18 @@ describe('Update Genre', () => {
     const genreRepo = new InMemoryGenreRepository();
     const updateGenre = new UpdateGenre(genreRepo);
 
-    const genre1 = makeGenre({
-      id: 'c89496c6-3150-4b9a-b3f8-c72edb8a3753',
-      name: 'Action',
-    });
-    const genre2 = makeGenre({
-      id: 'c89496c6-3150-4b9a-b3f8-c72edb8a3ea0',
-      name: 'Terror',
-    });
+    const genre1 = makeGenre(
+      {
+        name: 'Action',
+      },
+      'c89496c6-3150-4b9a-b3f8-c72edb8a3753',
+    );
+    const genre2 = makeGenre(
+      {
+        name: 'Terror',
+      },
+      'c89496c6-3150-4b9a-b3f8-c72edb8a3ea0',
+    );
 
     await genreRepo.create(genre1);
     await genreRepo.create(genre2);
